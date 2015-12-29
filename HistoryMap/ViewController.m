@@ -218,7 +218,7 @@ static const CLLocationCoordinate2D HangzhouLocation = {30.3, 120.2};
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    [manager GET:@"http://10.0.0.12:3000/api/Buildings" parameters:nil success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:@"http://0.0.0.0:3000/api/Buildings" parameters:nil success: ^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"GET --> %@, %@", responseObject, [NSThread currentThread]); //自动返回主线程
         
         [self setupEventsArray:responseObject];
